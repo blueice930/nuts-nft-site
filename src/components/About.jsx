@@ -1,43 +1,42 @@
 import react, {ReactComponent, useEffect, useState} from 'react';import React from 'react';
 
-import {ReactComponent as NutsLight} from '../assets/AboutPageMain.svg';
+import {ReactComponent as AboutBg} from '../assets/AboutPageMain.svg';
 import useWindowDimensions from '../helpers/positionHook';
 import useScrollPosition from '../helpers/scrollHook';
 import triggerAnimation from '../helpers/triggerAnimation';
 import infoBoardSvg from '../assets/infoBoardAbout.svg';
 
 import '../styles/About.scss';
-import '../styles/Nav.scss';
 
 const About = () => {
   const [isBoardShown, setIsBoardShown] = useState(false);
   const {width, height} = useWindowDimensions();
   const scrollPosition = useScrollPosition();
-  console.log('scrollPosition', scrollPosition);
-  useEffect(() => {
-    const manWithAK = document.querySelector('#manWithAKAbout');
-    const girlWithCat = document.querySelector('#girlWithCatAbout');
-    const blackGirl = document.querySelector('#blackGirlAbout');
-    
-    const whiteman = document.querySelector('#whitemanAbout');
-    const gangster = document.querySelector('#gangsterAbout');
-    const captainAmerica = document.querySelector('#captainAmericaAbout');
 
-    const itemList = [
-      manWithAK,
-      girlWithCat,
-      blackGirl,
-      whiteman,
-      gangster,
-      captainAmerica,
-    ];
+  // useEffect(() => {
+  //   const manWithAK = document.querySelector('#manWithAKAbout');
+  //   const girlWithCat = document.querySelector('#girlWithCatAbout');
+  //   const blackGirl = document.querySelector('#blackGirlAbout');
     
-    for (let i = 0; i < 8; i++) {
-      setTimeout(() => {
-        itemList[i]?.classList?.add('conveyor');
-      }, i * 1650);
-    }
-  }, []);
+  //   const whiteman = document.querySelector('#whitemanAbout');
+  //   const gangster = document.querySelector('#gangsterAbout');
+  //   const captainAmerica = document.querySelector('#captainAmericaAbout');
+
+  //   const itemList = [
+  //     manWithAK,
+  //     girlWithCat,
+  //     blackGirl,
+  //     whiteman,
+  //     gangster,
+  //     captainAmerica,
+  //   ];
+    
+  //   for (let i = 0; i < 8; i++) {
+  //     setTimeout(() => {
+  //       itemList[i]?.classList?.add('conveyor');
+  //     }, i * 1650);
+  //   }
+  // }, []);
 
   useEffect(() => {
     const infoBoard = document.querySelector('#infoBoardAbout');
@@ -52,7 +51,7 @@ const About = () => {
   return (
     <div className="about">
       <div className="bg-container">
-        <NutsLight />
+        <AboutBg />
         <div id='infoBoardAbout' className="board-container-about">
           <div className="position-container">
             <img src={infoBoardSvg} alt="info-board" />

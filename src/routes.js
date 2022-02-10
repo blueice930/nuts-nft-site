@@ -2,8 +2,8 @@
 const routes = {
   home: 'NutsPageMain',
   about: 'AboutPageMain',
-  roadmap: 'RoadPageMain',
-  team: 'team',
-  faqs: 'faqs',
+  roadmap: 'RoadmapPageMain',
+  team: 'TeamPageMain',
+  faqs: 'FAQsPageMain',
 }
 export default routes;

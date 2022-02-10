@@ -33,16 +33,14 @@ $conveyorSpeed: 15s;
     }
     .text {
       // border: 4px solid red;
-      margin: 8% 15%;
-      font-size: 14px;
+      margin: 0 15%;
+      font-size: 18px;
       font-family: 'Arial', sans-serif;
       position: absolute;
-      height: 30%;
-      top: 34%;
+      height: 28%;
+      top: 45%;
       left: 0;
       right: 0;
-      display: flex;
-      align-items: center;
       overflow: scroll;
     }
     .title {

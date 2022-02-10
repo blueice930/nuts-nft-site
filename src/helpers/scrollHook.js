@@ -5,7 +5,6 @@ export default function useScrollPosition() {
   
   const handleScroll = () => {
     const position = window.pageYOffset;
-    // console.log('position', position);
     setScrollPosition(position);
   };
   

@@ -2,10 +2,92 @@ $houseClickSpeed: .4s;
 
 .roadmap {
   .bg-container {
+    position: relative;
+    overflow: hidden;
     svg {
       width: 100%;
     }
 
+    .roadmap-title {
+      position: absolute;
+      top: 7%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 25%;
+
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 31px;
+      line-height: 38px;
+      text-align: center;
+      color: white;
+      border: 4px solid white;
+      border-radius: 8px;
+      padding: 10px 0;
+    }
+
+    .roadmap-text {
+      position: absolute;
+      width: 28%;
+      font-style: normal;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-weight: normal;
+      font-size: 17px;
+      line-height: 1.3;
+      // color: #000;
+      color: #FFF;
+      border: 2px solid #FFFB;
+      border-radius: 8px;
+      padding: 12px 24px;
+      // background-color: #fff5;
+      background-color: #0005;
+    }
+
+    .roadmap-text.left {
+      left: 12%;
+    }
+
+    .roadmap-text.right {
+      right: 12%;
+    }
+
+    .roadmap-text.box1 {
+      top: 17%;
+    }
+
+    .roadmap-text.box2 {
+      top: 22%;
+    }
+
+    .roadmap-text.box3 {
+      top: 30%;
+    }
+
+    .roadmap-text.box4 {
+      top: 40%;
+    }
+
+    .roadmap-text.box5 {
+      top: 42%;
+    }
+
+    .roadmap-text.box6 {
+      top: 55%;
+    }
+
+    .roadmap-text.box7 {
+      top: 60%;
+    }
+
+    .roadmap-text.box8 {
+      top: 65%;
+    }
+
+    .roadmap-text.box9 {
+      top: 75%;
+    }
   }
   
   #nutsBoardRdmp {
@@ -57,6 +139,108 @@ $houseClickSpeed: .4s;
   }
 }
 
+// UFO
+#ufoLightOnRdmp {
+  opacity: 0;
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  img {
+    width: 36vw;
+  }
+}
+
+// Man With Beer Cloud
+#manWithBeerCloud {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  img {
+    width: 22vw;
+  }
+}
+
+// Astronaunt with slide
+.slideline {
+  position: absolute;
+  width: 8px;
+  height: 76%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 15%;
+  border-right: 4px solid white;
+}
+
+#astronauntSlide {
+  position: absolute;
+  top: 14%;
+  width: 100%;
+  min-width: 960px;
+  display: flex;
+  justify-content: center;
+  transition: transform .7s ease;
+}
+
+// Stars layer
+.stars-layer {
+  width: 100%;
+  position: absolute;
+  top: 26%;
+  img {
+    width: 100%;
+  }
+}
+
+// Cakes
+.cakes-layer {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  img {
+    margin-left: 5%;
+    width: 42%;
+  }
+}
+
+// planets
+#bgPlanet {
+  position: absolute;
+  top: 12%;
+  left: 8%;
+  width: 9.1%;
+  opacity: .6;
+  animation: SPIN_LEFT 20s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#bgPlanet2 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 7%;
+  opacity: .6;
+  animation: SPIN_LEFT 20s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#bgPlanet3 {
+  position: absolute;
+  top: 15%;
+  right: 3%;
+  opacity: .6;
+  width: 7.3%;
+  animation: SPIN_RIGHT 20s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+
+///// keyframes
+
 @keyframes BOARD {
   to { transform: scaleY(1.2); }
 }
@@ -107,4 +291,24 @@ $houseClickSpeed: .4s;
 @-webkit-keyframes HOUSE {
   50% { transform: rotateX(30deg) scaleX(105%); }
   100% { transform: rotateX(0deg) scaleX(1); }
+}
+
+@keyframes SPIN_LEFT {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes SPIN_LEFT {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes SPIN_RIGHT {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(-360deg); }
+}
+
+@-webkit-keyframes SPIN_RIGHT {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(-360deg); }
 }

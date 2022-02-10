@@ -19,6 +19,8 @@ ReactDOM.render(
       <App />
       <About />
       <Roadmap />
+      <Team />
+      <FAQs />
       <Navbar />
     </div>
   </React.StrictMode>,
