@@ -1,0 +1,18 @@
+<svg width="1440" height="3072" viewBox="0 0 1440 3072" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="roadmapBgColor" d="M1510 -93H-84V3149H1510V-93Z" fill="url(#paint0_linear_343_6634)"/>
+<defs>
+<linearGradient id="paint0_linear_343_6634" x1="707.28" y1="502.07" x2="719.91" y2="2768.13" gradientUnits="userSpaceOnUse">
+<stop stop-color="#504095"/>
+<stop offset="0.06" stop-color="#564195"/>
+<stop offset="0.13" stop-color="#684393"/>
+<stop offset="0.22" stop-color="#854792"/>
+<stop offset="0.32" stop-color="#AD4C8F"/>
+<stop offset="0.42" stop-color="#E0538B"/>
+<stop offset="0.44" stop-color="#E7548B"/>
+<stop offset="0.58" stop-color="#D67DA6"/>
+<stop offset="0.77" stop-color="#C1B0C8"/>
+<stop offset="0.92" stop-color="#B4D0DD"/>
+<stop offset="1" stop-color="#AFDCE5"/>
+</linearGradient>
+</defs>
+</svg>

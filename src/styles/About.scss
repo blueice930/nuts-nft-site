@@ -1,0 +1,204 @@
+// Speed
+$boardSlideSpeed: 1s;
+$screwClickSpeed: 3s;
+$armSwinSpeed: 10s;
+$drillSwinSpeed: 8s;
+$conveyorSpeed: 15s;
+
+.about {
+  .bg-container {
+    position: relative;
+    svg {
+      width: 100%;
+    }
+  }
+}
+
+.board-container-about {
+  position: absolute;
+  width: 33.75%;
+  height: 55%;
+  left:34%;
+  top: 18%;
+
+  .position-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    img {
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .text {
+      // border: 4px solid red;
+      margin: 8% 15%;
+      font-size: 14px;
+      font-family: 'Arial', sans-serif;
+      position: absolute;
+      height: 30%;
+      top: 34%;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      overflow: scroll;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      height: 12%;
+      position: absolute;
+      top: 81%;
+      left: 0;
+      right: 0;
+      margin-left: 8%;
+      margin-right: 8%;
+    }
+  }
+}
+
+#infoBoardAbout.info-board-first-slide-in {
+  animation: BOARD_SLIDE $boardSlideSpeed forwards;
+}
+
+#infoBoardAbout.info-board-after-slide {
+  opacity: 1;
+}
+
+#infoBoardAbout {
+  opacity: 0;
+}
+
+#screwAbout {
+  animation: SCREW_SPIN $screwClickSpeed infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#machineArmAbout {
+  animation: ARM_SWIN $armSwinSpeed infinite;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+#machineDrillAbout {
+  animation: DRILL_SWIN $drillSwinSpeed infinite;
+  transform-origin: bottom left;
+  transform-box: fill-box;
+}
+
+.conveyor{
+  cursor: pointer;
+  animation: CONVEYOR $conveyorSpeed infinite linear;
+}
+
+#redLightAbout {
+  animation: RED_LIGHT 8s infinite linear;
+}
+#greenLightAbout {
+  animation: GREEN_LIGHT 8s infinite linear;
+}
+
+///////////////
+// keyframes //
+///////////////
+
+@keyframes BOARD_SLIDE {
+  0% { transform: translateY(-30%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@-webkit-keyframes BOARD_SLIDE {
+  0% { transform: translateY(-30%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes SCREW_SPIN {
+  25% { transform: rotate(-90deg); }
+  60% { transform: rotate(0); }
+}
+
+@-webkit-keyframes SCREW_SPIN {
+  25% { transform: rotate(-90deg); }
+  60% { transform: rotate(0); }
+}
+
+@keyframes ARM_SWIN {
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(0); }
+  60% { transform: rotate(0); }
+  75% { transform: rotate(-10deg); }
+  90% { transform: rotate(0); }
+}
+
+@-webkit-keyframes ARM_SWIN {
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(0); }
+  60% { transform: rotate(0); }
+  75% { transform: rotate(-10deg); }
+  90% { transform: rotate(0); }
+}
+
+@keyframes DRILL_SWIN {
+  30% { transform: rotate(20deg); }
+  50% { transform: rotate(0); }
+  70% { transform: rotate(0); }
+  80% { transform: rotate(-5deg); }
+  90% { transform: rotate(0); }
+}
+
+@-webkit-keyframes DRILL_SWIN {
+  30% { transform: rotate(20deg); }
+  50% { transform: rotate(0); }
+  70% { transform: rotate(0); }
+  80% { transform: rotate(-5deg); }
+  90% { transform: rotate(0); }
+}
+
+@keyframes CONVEYOR {
+  from { transform: translateX(0%);}
+  to {transform: translateX(110%)}
+}
+
+@-webkit-keyframes CONVEYOR {
+  from { transform: translateX(-50%);}
+  to {transform: translateX(50%)}
+}
+
+@keyframes RED_LIGHT {
+  0% { filter: brightness(1);}
+  1% { filter: brightness(.5);}
+  51% { filter: brightness(.5);}
+  52% { filter: brightness(1);}
+  100% { filter: brightness(1);}
+}
+
+@-webkit-keyframes RED_LIGHT {
+  0% { filter: brightness(1);}
+  1% { filter: brightness(.5);}
+  51% { filter: brightness(.5);}
+  52% { filter: brightness(1);}
+  100% { filter: brightness(1);}
+}
+
+@keyframes GREEN_LIGHT {
+  0% { filter: brightness(.5);}
+  1% { filter: brightness(1);}
+  51% { filter: brightness(1);}
+  52% { filter: brightness(.5);}
+  100% { filter: brightness(.5);}
+}
+
+@-webkit-keyframes GREEN_LIGHT {
+  0% { filter: brightness(.5);}
+  5% { filter: brightness(1);}
+  50% { filter: brightness(1);}
+  55% { filter: brightness(.5);}
+}
+

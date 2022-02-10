@@ -1,0 +1,110 @@
+$houseClickSpeed: .4s;
+
+.roadmap {
+  .bg-container {
+    svg {
+      width: 100%;
+    }
+
+  }
+  
+  #nutsBoardRdmp {
+    cursor: pointer;
+  }
+
+  #nutsBoardRdmp:hover {
+    animation: BOARD .5s forwards;
+    transform-origin: bottom;
+    transform-box: fill-box;
+  }
+
+  #bananaRdmp {
+    cursor: pointer;
+  }
+
+  #bananaRdmp:hover {
+    animation: BANANA .5s forwards;
+    transform-origin: bottom center;
+    transform-box: fill-box;
+  }
+
+  #captainCarRdmp {
+    transform-origin: bottom;
+    transform-box: fill-box;
+    animation: CAR .2s infinite;
+  }
+
+  #blondieRdmp {
+    transform-box: fill-box;
+    transform-origin: bottom;
+    animation: ZOMBIE 1.5s infinite;
+  }
+
+  #houseLeftRdmp, #houseRightRdmp {
+    cursor: pointer;
+  }
+
+  #houseLeftRdmp:hover {
+    animation: HOUSE  $houseClickSpeed ease;
+    transform-origin: 55% 100%;
+    transform-box: fill-box;
+  }
+
+  #houseRightRdmp:hover {
+    animation: HOUSE  $houseClickSpeed ease;
+    transform-origin: 55% 100%;
+    transform-box: fill-box;
+  }
+}
+
+@keyframes BOARD {
+  to { transform: scaleY(1.2); }
+}
+
+@-webkit-keyframes BOARD {
+  to { transform: scaleY(1.2); }
+}
+
+@keyframes BANANA {
+  30% {transform: rotate(5deg);}
+  60% {transform: rotate(-5deg);}
+  90% {transform: rotate(0);}
+}
+
+@-webkit-keyframes BANANA {
+  30% {transform: rotate(5deg);}
+  60% {transform: rotate(-5deg);}
+  90% {transform: rotate(0);}
+}
+
+@keyframes CAR {
+  50% {transform: translateY(2px);}
+}
+
+@-webkit-keyframes CAR {
+  50% {transform: translateY(2px);}
+}
+
+@keyframes ZOMBIE {
+  0% {transform: rotate(0);}
+  50% {transform: rotate(-4deg);}
+  60% {transform: rotate(4deg);}
+  100% {transform: rotate(0);}
+}
+
+@-webkit-keyframes ZOMBIE {
+  0% {transform: rotate(0);}
+  50% {transform: rotate(-4deg);}
+  60% {transform: rotate(4deg);}
+  100% {transform: rotate(0);}
+}
+
+@keyframes HOUSE {
+  50% { transform: rotateX(30deg) scaleX(105%); }
+  100% { transform: rotateX(0deg) scaleX(1); }
+}
+
+@-webkit-keyframes HOUSE {
+  50% { transform: rotateX(30deg) scaleX(105%); }
+  100% { transform: rotateX(0deg) scaleX(1); }
+}

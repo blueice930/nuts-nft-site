@@ -1,0 +1,308 @@
+// Speed
+$spinSpeed1: 10s;
+$spinSpeed2: 15s;
+
+$starSlideSpeed: 2s;
+$starZoomSpeed: .5s;
+
+$womanSlideSpeed: 2s;
+$womanClickSpeed: .5s;
+
+$manAkSpeed: .5s;
+$blackWomanSpeed: 1s;
+
+$UFOSlideSpeed: 4s;
+$UFOClickSpeed: .5s;
+
+$nutClickSpeed: .3s;
+
+$bannerClickSpeed: .4s;
+
+.app {
+  .bg-container {
+    svg {
+      width: 100%;
+    }
+  }
+}
+
+// planet
+g#bgPlanet1Nuts {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: SPIN_1 infinite $spinSpeed2 linear;
+}
+
+g#bgPlanet2Nuts {
+  -webkit-animation-name: SPIN_2;
+  -webkit-animation-duration: $spinSpeed1;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: SPIN_2;
+  -moz-animation-duration: $spinSpeed1;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: SPIN_2;
+  -ms-animation-duration: $spinSpeed1;
+
+  -ms-animation-timing-function: linear;
+  
+  animation-name: SPIN_2;
+  animation-duration: $spinSpeed1;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+// star
+.star-first-slide-in {
+  animation: SLIDE_IN_1 $starSlideSpeed forwards;
+  -webkit-animation: SLIDE_IN_1 $starSlideSpeed forwards;
+}
+
+.after-slide:hover {
+  cursor: pointer;
+  animation: ZOOM_IN_OUT forwards $starZoomSpeed ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+// woman with makeup
+.woman-with-makeup-first-slide-in {
+  animation: WOMAN_MAKEUP_SLIDE_IN_2 forwards $womanSlideSpeed ease;
+}
+
+.woman-with-makeup-click-movemnt {
+  animation: WOMAN_MAKEUP_CLICK_SLIDE forwards $womanClickSpeed ease;
+}
+
+#womanWithMakeUpNuts {
+  cursor: pointer;
+  filter: drop-shadow( 10px 10px 8px rgba(0, 0, 0, .7));
+}
+
+// man with ak-47
+#manWithAKNuts {
+  cursor: pointer;
+  transform-origin: bottom;
+  transform-box: fill-box;
+  transform:
+    translateX(180%)
+    translateY(385%)
+    rotateY(180deg)
+    rotate(-8deg);
+}
+
+#manWithAKNuts:hover {
+  animation: MAN_WITH_AK forwards $manAkSpeed ease;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+// black woman with flag
+#blackWomanWithFlagNuts {
+  cursor: pointer;
+  transform-origin: 40% 90%;
+  transform-box: fill-box;
+  transform: translateY(4%);
+}
+
+#flag {
+  filter: drop-shadow( 5px 5px 4px rgba(0, 0, 0, .7));
+}
+
+#blackWomanWithFlagNuts:hover {
+  animation: BLACK_WOMAN forwards $blackWomanSpeed ease;
+  transform-origin: 40% 90%;
+  transform-box: fill-box;
+}
+
+// UFO
+#manUFOLightNuts {
+  cursor: pointer;
+  filter: drop-shadow( 5px 5px 4px rgba(0, 0, 0, .7));
+}
+
+.ufo-slide-in {
+  animation: UFO_SLIDE forwards $UFOSlideSpeed ease;
+}
+
+.ufo-click-shake {
+  animation: UFO_CLICK forwards $UFOClickSpeed ease;
+  transform-origin: 55% 50%;
+  transform-box: fill-box;
+}
+
+// Nuts
+#nutNuts {
+  cursor: pointer;
+}
+
+#nutNuts:hover {
+  animation: NUT_HOVER forwards $nutClickSpeed ease;
+  transform-origin: 55% 100%;
+  transform-box: fill-box;
+}
+
+// Banner
+#bannerLightNuts {
+  cursor: pointer;
+}
+
+#bannerLightNuts:hover {
+  animation: BANNER_HOVER  $bannerClickSpeed ease;
+  transform-origin: 55% 100%;
+  transform-box: fill-box;
+}
+
+///////////////
+// keyframes //
+///////////////
+
+@-moz-keyframes SPIN_2 {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes SPIN_2 {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes SPIN_2 {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+@keyframes ZOOM_IN_OUT {
+  0% {
+    transform: scale(1, 1), rotate(0deg);
+  }
+  50% {
+    transform: scale(1.3, 1.3);
+  }
+  100% {
+    transform: scale(1, 1), rotate(360deg);
+  }
+}
+
+@keyframes SPIN_1 {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(-360deg);}
+}
+
+@keyframes SLIDE_IN_1 {
+  from { transform: translateY(-40%); }
+}
+
+@-webkit-keyframes SLIDE_IN_1 {
+  from { -webkit-transform: translateY(-40%); }
+}
+
+@keyframes WOMAN_MAKEUP_SLIDE_IN_2 {
+  0% { transform: translateX(110%) translateY(120%) scaleX(-1); }
+  40% { transform: translateX(110%) translateY(75%) scaleX(-1); }
+  50% { transform: translateX(110%) translateY(80%) scaleX(-1); }
+  100% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
+}
+
+@-webkit-keyframes WOMAN_MAKEUP_SLIDE_IN_2 {
+  0% { transform: translateX(110%) translateY(120%) scaleX(-1); }
+  40% { transform: translateX(110%) translateY(75%) scaleX(-1); }
+  50% { transform: translateX(110%) translateY(80%) scaleX(-1); }
+  100% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
+}
+
+@keyframes WOMAN_MAKEUP_CLICK_SLIDE {
+  0% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
+  40% { transform: translateX(110%) translateY(65%) scaleX(-1); }
+  100% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
+}
+
+@-webkit-keyframes WOMAN_MAKEUP_CLICK_SLIDE {
+  0% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
+  40% { transform: translateX(110%) translateY(65%) scaleX(-1); }
+  100% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
+}
+
+@keyframes UFO_SLIDE {
+  0% { transform: translateX(-10%) translateY(0%); }
+  30% { transform: translateX(0%) translateY(10%); }
+  100% { transform: translateX(0%) translateY(0%); }
+}
+
+@-webkit-keyframes UFO_SLIDE {
+  0% { transform: translateX(-10%) translateY(0%); }
+  30% { transform: translateX(0%) translateY(10%); }
+  100% { transform: translateX(0%) translateY(0%); }
+}
+
+@keyframes UFO_CLICK {
+  0% { transform:  rotate(0); }
+  25% { transform:  rotate(15deg); }
+  75% { transform:  rotate(-15deg); }
+  100% { transform:  rotate(0); }
+}
+
+@-webkit-keyframes UFO_CLICK {
+  0% { transform:  rotate(0); }
+  25% { transform:  rotate(15deg); }
+  75% { transform:  rotate(-15deg); }
+  100% { transform:  rotate(0); }
+}
+
+@keyframes NUT_HOVER {
+  50% { transform: scaleY(80%); }
+  100% { transform: scaleY(1); }
+}
+
+@-webkit-keyframes NUT_HOVER {
+  50% { transform: scaleY(80%); }
+  100% { transform: scaleY(1); }
+}
+
+@keyframes BANNER_HOVER {
+  50% { transform: rotateX(30deg) scaleX(105%); }
+  100% { transform: rotateX(0deg) scaleX(1); }
+}
+
+@-webkit-keyframes BANNER_HOVER {
+  50% { transform: rotateX(30deg) scaleX(105%); }
+  100% { transform: rotateX(0deg) scaleX(1); }
+}
+
+@keyframes BLACK_WOMAN {
+  40% { transform: translateY(4%) rotate(10deg); }
+  60% { transform: translateY(4%) rotate(0deg); }
+}
+
+@-webkit-keyframes BLACK_WOMAN {
+  50% { transform: rotateX(30deg) scaleX(105%); }
+  100% { transform: rotateX(0deg) scaleX(1); }
+}
+
+@keyframes MAN_WITH_AK {
+  80% {
+    transform:
+      translateX(180%)
+      translateY(385%)
+      rotateY(180deg)
+      rotate(-8deg)
+      rotateX(45deg)
+      scaleX(115%);
+  }
+}
+
+@-webkit-keyframes MAN_WITH_AK {
+  80% {
+    transform:
+      translateX(180%)
+      translateY(385%)
+      rotateY(180deg)
+      rotate(-8deg)
+      rotateX(45deg)
+      scaleX(115%);
+  }
+}
+
+

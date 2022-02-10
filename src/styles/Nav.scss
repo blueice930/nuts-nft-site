@@ -1,0 +1,26 @@
+#btnNuts,
+#btnAbout,
+#btnRoadmap,
+#btnTeam,
+#btnFAQs {
+  cursor: pointer;
+  position: -webkit-sticky;
+  position: absolute;
+  top: 2000px;
+}
+
+#btnNuts:hover,
+#btnAbout:hover,
+#btnRoadmap:hover,
+#btnTeam:hover,
+#btnFAQs:hover {
+  cursor: pointer;
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: scale(110%);
+}
+
+// connect wallet not ready
+#connectWallet {
+  display: none;
+}
