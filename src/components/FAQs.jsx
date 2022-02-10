@@ -1,5 +1,5 @@
 import { Parallax } from 'rc-scroll-anim';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {ReactComponent as FAQsBg} from '../assets/FAQsPageMain.svg';
 import img1 from '../assets/FAQs/img1.svg';
@@ -7,8 +7,23 @@ import img2 from '../assets/FAQs/img2.svg';
 import img3 from '../assets/FAQs/img3.svg';
 
 import '../styles/FAQs.scss';
+import { DISCORD_LINK, IG_LINNK, TIKTOK_LINK, TWITTER_LINK } from './App';
 
 const FAQs = () => {
+  useEffect(() => {
+    const opensea = document.querySelector("#openseaIconFAQ")
+    const ig = document.querySelector("#igIconFAQ")
+    const twitter = document.querySelector("#twitterIconFAQ")
+    const discord = document.querySelector("#discordIconFAQ")
+    const tiktok = document.querySelector("#tiktokIconFAQ")
+    
+    ig.addEventListener('click', () => window.open(IG_LINNK, '_blank'));
+    twitter.addEventListener('click', () => window.open(TWITTER_LINK, '_blank'));
+    discord.addEventListener('click', () => window.open(DISCORD_LINK, '_blank'));
+    tiktok.addEventListener('click', () => window.open(TIKTOK_LINK, '_blank'));
+  }, []);
+  
+
   return (
     <div className="faqs">
       <div className="bg-container">

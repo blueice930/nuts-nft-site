@@ -26,6 +26,24 @@ $bannerClickSpeed: .4s;
   }
 }
 
+#openseaIcon {
+  display: none;
+}
+
+#twitterIcon, #discordIcon {
+  cursor: pointer;
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: transform .1s ease;
+  transition: filter .1s ease;
+}
+
+#twitterIcon:hover, #discordIcon:hover {
+  filter: invert(50%);
+  transform: scale(1.1);
+}
+
+
 // planet
 g#bgPlanet1Nuts {
   transform-origin: center;

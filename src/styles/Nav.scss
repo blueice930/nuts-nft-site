@@ -4,6 +4,9 @@
 #btnTeam,
 #btnFAQs {
   cursor: pointer;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform .1s ease;
 }
 
 #btnNuts:hover,

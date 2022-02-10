@@ -14,6 +14,11 @@ const $womanClickSpeed = 500;
 const $UFOSlideSpeed = 4000;
 const $UFOClickSpeed = 500;
 
+export const TWITTER_LINK = "https://twitter.com/youaregoingnuts"
+export const DISCORD_LINK = "https://discord.gg/RRTZ8F8E8t"
+export const TIKTOK_LINK = "https://vm.tiktok.com/TTPdksC2pv/"
+export const IG_LINNK = "https://instagram.com/youaregoingnuts?utm_medium=copy_link"
+
 function App() {
   const {navAddClickListener} = useNav(); 
 
@@ -22,6 +27,9 @@ function App() {
     const stars = document.querySelectorAll('g#bgStar1Nuts, g#bgStar2Nuts, g#bgStar3Nuts, g#bgStar4Nuts, g#bgStar5Nuts');
     const womanWithMakeup = document.querySelector('#womanWithMakeUpNuts');
     const manUFO = document.querySelector('#manUFOLightNuts');
+    const twitter = document.querySelector('#twitterIcon');
+    const discord = document.querySelector('#discordIcon');
+    const opensea = document.querySelector('#openseaIcon');
 
     // // stars slide in
     for (const s of stars) {
@@ -39,6 +47,9 @@ function App() {
     setTimeout(() => {
       manUFO?.addEventListener("click", () => triggerAnimation(manUFO, 'ufo-click-shake', '', $UFOClickSpeed))
     }, $UFOSlideSpeed);
+
+    twitter.addEventListener("click", () => window.open(TWITTER_LINK, 'blank'))
+    discord.addEventListener("click", () => window.open(DISCORD_LINK, 'blank'))
 
   }
   , [navAddClickListener]);

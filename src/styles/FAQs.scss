@@ -110,4 +110,21 @@
     }
 
   }
+
+  #openseaIconFAQ {
+    display: none;
+  }
+
+  #igIconFAQ, #twitterIconFAQ, #discordIconFAQ, #tiktokIconFAQ {
+    cursor: pointer;
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: transform .1s ease;
+    transition: filter .1s ease;
+  }
+
+  #igIconFAQ:hover, #twitterIconFAQ:hover, #discordIconFAQ:hover, #tiktokIconFAQ:hover {
+    filter: invert(50%);
+    transform: scale(1.1);
+  }
 }
