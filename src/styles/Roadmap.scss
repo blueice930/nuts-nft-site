@@ -28,6 +28,16 @@ $houseClickSpeed: .4s;
       border: 4px solid white;
       border-radius: 8px;
       padding: 10px 0;
+
+      @media screen and (max-width: 1200px)  {
+        font-size: 31px;
+      }
+      @media screen and(min-width: 1200px) and (max-width: 1800px)  {
+        font-size: 36px;
+      }
+      @media screen and(min-width: 1800px) {
+        font-size: 42px;
+      }
     }
 
     .roadmap-text {
@@ -45,6 +55,16 @@ $houseClickSpeed: .4s;
       padding: 12px 24px;
       // background-color: #fff5;
       background-color: #0005;
+
+      @media screen and (max-width: 1200px)  {
+        font-size: 17px;
+      }
+      @media screen and(min-width: 1200px) and (max-width: 1800px)  {
+        font-size: 22px;
+      }
+      @media screen and(min-width: 1800px) {
+        font-size: 28px;
+      }
     }
 
     .roadmap-text.left {
