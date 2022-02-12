@@ -27,7 +27,7 @@ $bannerClickSpeed: .4s;
 }
 
 #openseaIcon {
-  display: none;
+  cursor: no-drop;
 }
 
 #twitterIcon, #discordIcon {
@@ -175,6 +175,10 @@ g#bgPlanet2Nuts {
   transform-box: fill-box;
 }
 
+#joinUsPtr {
+  animation: POINTER_PALSE 1s ease infinite;
+}
+
 ///////////////
 // keyframes //
 ///////////////
@@ -320,6 +324,42 @@ g#bgPlanet2Nuts {
       rotate(-8deg)
       rotateX(45deg)
       scaleX(115%);
+  }
+}
+
+@keyframes POINTER_PALSE {
+  0% {
+    transform:
+      translateX(0)
+      translateY(0)
+  }
+  20% {
+    transform:
+      translateX(-10px)
+      translateY(-10px)
+  }
+  30% {
+    transform:
+      translateX(0)
+      translateY(0)
+  }
+}
+
+@-webkit-keyframes POINTER_PALSE {
+  0% {
+    transform:
+      translateX(0)
+      translateY(0)
+  }
+  20% {
+    transform:
+      translateX(-10px)
+      translateY(-10px)
+  }
+  30% {
+    transform:
+      translateX(0)
+      translateY(0)
   }
 }
 

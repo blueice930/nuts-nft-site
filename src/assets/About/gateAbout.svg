@@ -1,0 +1,11 @@
+<svg width="243" height="481" viewBox="0 0 243 481" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="gateAbout">
+<path id="greenLightAbout" d="M239.5 67C239.5 62.3056 235.694 58.5 231 58.5C226.306 58.5 222.5 62.3056 222.5 67V77C222.5 81.6944 226.306 85.5 231 85.5C235.694 85.5 239.5 81.6944 239.5 77V67Z" fill="#39B24A" stroke="black" stroke-width="7" stroke-miterlimit="10"/>
+<path id="redLightAbout" d="M239.5 30C239.5 25.3056 235.694 21.5 231 21.5C226.306 21.5 222.5 25.3056 222.5 30V40C222.5 44.6944 226.306 48.5 231 48.5C235.694 48.5 239.5 44.6944 239.5 40V30Z" fill="#FF0000" stroke="black" stroke-width="7" stroke-miterlimit="10"/>
+<path id="Vector" d="M209 4H16C9.37258 4 4 9.37258 4 16V465.5C4 472.127 9.37258 477.5 16 477.5H209C215.627 477.5 221 472.127 221 465.5V16C221 9.37258 215.627 4 209 4Z" fill="#6D60CA" stroke="black" stroke-width="7" stroke-miterlimit="10"/>
+<g id="screwAbout">
+<path id="Vector_2" d="M152.5 86C169.897 86 184 71.897 184 54.5C184 37.103 169.897 23 152.5 23C135.103 23 121 37.103 121 54.5C121 71.897 135.103 86 152.5 86Z" stroke="black" stroke-width="7" stroke-miterlimit="10"/>
+<path id="Vector_3" d="M131 78L175 33" stroke="black" stroke-width="7" stroke-miterlimit="10"/>
+</g>
+</g>
+</svg>

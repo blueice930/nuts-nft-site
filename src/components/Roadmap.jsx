@@ -4,7 +4,7 @@ import {debounce} from 'lodash'
 
 import {ReactComponent as RoadmapBg} from '../assets/RoadmapPageMain.svg'
 
-import astronauntSlide from "../assets/Roadmap/astronauntSlide.svg"
+import astronauntSlide from "../assets/Roadmap/astronauntSlide.png"
 import bgCake from "../assets/Roadmap/bgCake.svg"
 import bgPlanet from "../assets/Roadmap/bgPlanet.svg"
 import bgPlanet2 from "../assets/Roadmap/bgPlanet2.svg"
@@ -26,8 +26,8 @@ const Roadmap = () => {
     const w = window.innerWidth;
     const scrollPos = window.pageYOffset;
 
-    const ASTRO_START_POS_FACTOR = 2900 / 1440;
-    const ASTRO_END_POS_FACTOR = 5000 / 1440;
+    const ASTRO_START_POS_FACTOR = 3320 / 1440;
+    const ASTRO_END_POS_FACTOR = 5420 / 1440;
     const MIN_WIDTH = 960;
 
     const astroStartPoint = Math.max((w * ASTRO_START_POS_FACTOR), (MIN_WIDTH * ASTRO_START_POS_FACTOR));
@@ -120,7 +120,7 @@ const Roadmap = () => {
           style={{ opacity: 0 }}
           className='roadmap-title' 
         >
-            NUTTIEGANG'S ROADMAP
+            NUTTIEGANG'S <br /> ROADMAP
         </Parallax>
         <Parallax
           animation={[

@@ -3,62 +3,151 @@ $boardSlideSpeed: 1s;
 $screwClickSpeed: 3s;
 $armSwinSpeed: 10s;
 $drillSwinSpeed: 8s;
-$conveyorSpeed: 15s;
+$conveyorSpeed: 10s;
+$nutsSpeed: 4s;
 
 .about {
   .bg-container {
     position: relative;
+    margin: 5px;
+    overflow: hidden;
     svg {
       width: 100%;
+    }
+    img {
+      max-width: 100%;
+    }
+
+    .partial {
+      position: absolute;
+    }
+
+    img.ppl-movable {
+      left: -100px;
+      max-width: 220px;
+      width: 15%;
+      bottom: 8%;
+    }
+
+    img.nuts-movable {
+      top: 46%;
+      right: -5%;
+      transform-box: view-box;
+      width: 6%;
+      max-width: 100px;
+    }
+
+    img.nuts-movable.moving {
+      @media screen and (max-width: 960px)  {
+        animation: NUTS_SHORT $nutsSpeed linear infinite;
+      }
+      @media screen and(min-width: 960px) {
+        animation: NUTS_LONG $nutsSpeed linear infinite;
+      }
+    }
+    
+    img.ppl-movable.moving {
+      transform-box: view-box;
+      @media screen and (max-width: 960px)  {
+        animation: CONVEYOR_SHORT $conveyorSpeed linear infinite;
+      }
+      @media screen and(min-width: 960px) {
+        animation: CONVEYOR_LONG $conveyorSpeed linear infinite;
+      }
+    }
+
+    img.conveyorPipeLayer {
+      left: 0;
+      bottom: 2%;
+      width: 100%;
+    }
+
+    svg.partial.gateAbout {
+      width: 14.6%;
+      height: auto;
+      left: -10px;
+      bottom: 2%;
+    }
+    svg.machineArm {
+      width: 36.8%;
+      height: 48%;
+      right: -3%;
+      top: 10%;
+    }
+
+    svg.machineDrill {
+      width: 50%;
+      height: 42.9%;
+      top: 20%;
+      left: -3%;
     }
   }
 }
 
 .board-container-about {
+  @media screen and (max-width: 1200px)  {
+    width: 400px;
+  }
+  @media screen and(min-width: 1200px) and (max-width: 1800px)  {
+    width: 500px;
+  }
+  @media screen and(min-width: 1800px) {
+    width: 600px;
+  }
+  height: fit-content;
   position: absolute;
-  width: 33.75%;
-  height: 55%;
-  left:34%;
-  top: 18%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 
   .position-container {
-    display: block;
     position: relative;
-    width: 100%;
-    height: 100%; 
+
     img {
-      position: absolute;
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
     }
     .text {
-      // border: 4px solid red;
-      margin: 0 15%;
-      font-size: 18px;
-      font-family: 'Arial', sans-serif;
       position: absolute;
-      height: 28%;
-      top: 45%;
+      margin: 0 12%;
+      font-size: 18px;
+      font-family: 'Montserrat', 'Lucida Sans', Arial, sans-serif;
+      top: 31%;
       left: 0;
       right: 0;
-      overflow: scroll;
+      @media screen and (max-width: 1200px)  {
+        font-size: 17px;
+      }
+      @media screen and(min-width: 1200px) and (max-width: 1800px)  {
+        font-size: 21px;
+      }
+      @media screen and(min-width: 1800px) {
+        font-size: 25px;
+      }
     }
     .title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: absolute;
+      text-align: center;
       font-size: 28px;
       font-weight: bold;
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      height: 12%;
-      position: absolute;
-      top: 81%;
+      top: 84%;
       left: 0;
       right: 0;
-      margin-left: 8%;
-      margin-right: 8%;
+
+      @media screen and (max-width: 1200px)  {
+        font-size: 28px;
+      }
+      @media screen and(min-width: 1200px) and (max-width: 1800px)  {
+        font-size: 32px;
+      }
+      @media screen and(min-width: 1800px) {
+        font-size: 36px;
+      }
     }
   }
+
 }
 
 #infoBoardAbout.info-board-first-slide-in {
@@ -71,6 +160,7 @@ $conveyorSpeed: 15s;
 
 #infoBoardAbout {
   opacity: 0;
+  filter: drop-shadow( 10px 10px 8px rgba(0, 0, 0, .7));
 }
 
 #screwAbout {
@@ -89,11 +179,6 @@ $conveyorSpeed: 15s;
   animation: DRILL_SWIN $drillSwinSpeed infinite;
   transform-origin: bottom left;
   transform-box: fill-box;
-}
-
-.conveyor{
-  cursor: pointer;
-  animation: CONVEYOR $conveyorSpeed infinite linear;
 }
 
 #redLightAbout {
@@ -159,14 +244,38 @@ $conveyorSpeed: 15s;
   90% { transform: rotate(0); }
 }
 
-@keyframes CONVEYOR {
-  from { transform: translateX(0%);}
-  to {transform: translateX(110%)}
+@keyframes CONVEYOR_SHORT {
+  to {transform: translateX(1300px);}
 }
 
-@-webkit-keyframes CONVEYOR {
-  from { transform: translateX(-50%);}
-  to {transform: translateX(50%)}
+@-webkit-keyframes CONVEYOR_SHORT {
+  to {transform: translateX(1300px);}
+}
+
+
+@keyframes CONVEYOR_LONG {
+  to {transform: translateX(110vw);}
+}
+
+@-webkit-keyframes CONVEYOR_LONG {
+  to {transform: translateX(110vw);}
+}
+
+@keyframes NUTS_SHORT {
+  to {transform: translateX(-700px);}
+}
+
+@-webkit-keyframes NUTS_SHORT {
+  to {transform: translateX(-700px);}
+}
+
+
+@keyframes NUTS_LONG {
+  to {transform: translateX(-70vw);}
+}
+
+@-webkit-keyframes NUTS_LONG {
+  to {transform: translateX(-90vw);}
 }
 
 @keyframes RED_LIGHT {
