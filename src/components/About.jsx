@@ -26,8 +26,6 @@ import {ReactComponent as GateAbout} from "../assets/About/gateAbout.svg"
 import {ReactComponent as MachineArm} from "../assets/About/machineArm.svg"
 import {ReactComponent as MachineDrillAbout} from "../assets/About/machineDrillAbout.svg"
 
-
-
 import '../styles/About.scss';
 import { DISCORD_LINK } from './App';
 
@@ -73,19 +71,41 @@ const About = () => {
       nut4About,
     ]
 
-    const pplListeners = pplList.map((ppl, index) => (
-      setTimeout(() => {ppl?.classList?.add('moving')}, index*1000)
-    ))
-
-    const nutsListener = nutsList.map((nut, index) => {
-      setTimeout(() => {
-        nut?.classList?.add('moving')
-      }, index*1000);
+    // reset
+    const allMoveables = [...pplList, ...nutsList];
+    allMoveables.forEach((e) => {
+      if (e?.classList && e?.classList.contains('moving')) {
+        e.classList.remove('moving')
+      }
     })
 
+
+    const pplListeners = pplList.map((ppl, index) => (
+      (ppl?.classList?.contains('moving')) ?
+        null :
+        setTimeout(() => {ppl?.classList?.add('moving')}, index*1000)
+    ))
+
+    const nutsListener = nutsList.map((nut, index) => (
+      (nut?.classList?.contains('moving')) ?
+        null :
+        setTimeout(() => {
+          nut?.classList?.add('moving')
+        }, index*1000)
+    ));
+
     return () => {
-      pplListeners.forEach(lis => clearTimeout(lis))
-      nutsListener.forEach(lis => clearTimeout(lis))
+      pplListeners.forEach(lis => {
+        if (lis) {
+          clearTimeout(lis)
+        }
+      })
+
+      nutsListener.forEach(lis => {
+        if (lis) {
+          clearTimeout(lis)
+        }
+      })
     }
   }, [width]);
 

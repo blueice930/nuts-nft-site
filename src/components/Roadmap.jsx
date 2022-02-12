@@ -26,8 +26,8 @@ const Roadmap = () => {
     const w = window.innerWidth;
     const scrollPos = window.pageYOffset;
 
-    const ASTRO_START_POS_FACTOR = 3320 / 1440;
-    const ASTRO_END_POS_FACTOR = 5420 / 1440;
+    const ASTRO_START_POS_FACTOR = 3020 / 1440;
+    const ASTRO_END_POS_FACTOR = 5120 / 1440;
     const MIN_WIDTH = 960;
 
     const astroStartPoint = Math.max((w * ASTRO_START_POS_FACTOR), (MIN_WIDTH * ASTRO_START_POS_FACTOR));

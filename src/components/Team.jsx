@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {ReactComponent as TeamBg} from '../assets/TeamPageMain.svg';
-
 import '../styles/Team.scss';
 
 import team1 from "../assets/Team/team1.png"
@@ -12,8 +10,6 @@ import team5 from "../assets/Team/team5.png"
 import team6 from "../assets/Team/team6.png"
 import team7 from "../assets/Team/team7.png"
 import team8 from "../assets/Team/team8.png"
-
-
 
 const Team = () => {
   const memberList = [
