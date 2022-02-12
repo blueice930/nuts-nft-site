@@ -90,8 +90,7 @@ const Team = () => {
 
   return (
     <div className="team">
-      <div className="bg-container">
-        <TeamBg />
+      <div className="bg-container" id='TeamPageMain'>
         <div className="title">
           OUR TEAM
         </div>

@@ -1,7 +1,7 @@
 import { Parallax } from 'rc-scroll-anim';
 import React, { useEffect } from 'react';
 
-import {ReactComponent as FAQsBg} from '../assets/FAQsPageMain.svg';
+import {ReactComponent as FAQsBg} from '../assets/FAQs/iconsFooterFAQs.svg';
 import img1 from '../assets/FAQs/img1.svg';
 import img2 from '../assets/FAQs/img2.svg';
 import img3 from '../assets/FAQs/img3.svg';
@@ -28,7 +28,7 @@ const FAQs = () => {
 
   return (
     <div className="faqs">
-      <div className="bg-container">
+      <div className="bg-container" id='FAQsPageMain'>
         <FAQsBg />
         <div className="title">
           FAQs

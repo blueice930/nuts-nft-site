@@ -3,6 +3,20 @@
     position: relative;
     overflow: hidden;
     margin: 5px 10px;
+    border-radius: 16px;
+    background: linear-gradient(116.89deg, #EABCB6 19.33%, #E0C1BE 35.83%, #C5D0D4 63.75%, #AFDCE5 82.79%);
+
+    @media screen and (max-width: 1200px)  {
+      height: 1024px;
+    }
+    @media screen and(min-width: 1200px) and (max-width: 1800px)  {
+      height: 1500px;
+    }
+    @media screen and(min-width: 1800px) {
+      height: 1600px;
+    }
+
+
     svg {
       width: 100%;
     }
@@ -13,6 +27,7 @@
       left: 0;
       right: 0;
       width: 14%;
+      max-width: 300px;
       margin: auto;
       text-align: center;
       font-family: Impact;
@@ -21,7 +36,7 @@
       font-size: 31px;
       line-height: 38px;
       border-radius: 16px;
-      padding: 1% 3%;
+      padding: 10px 20px;
       border: 4px solid #fff;
       color: #fff;
 

@@ -29,6 +29,7 @@ import {ReactComponent as MachineDrillAbout} from "../assets/About/machineDrillA
 
 
 import '../styles/About.scss';
+import { DISCORD_LINK } from './App';
 
 const About = () => {
   const [isBoardShown, setIsBoardShown] = useState(false);
@@ -86,7 +87,7 @@ const About = () => {
       pplListeners.forEach(lis => clearTimeout(lis))
       nutsListener.forEach(lis => clearTimeout(lis))
     }
-  }, []);
+  }, [width]);
 
   useEffect(() => {
     const infoBoard = document.querySelector('#infoBoardAbout');
@@ -135,8 +136,8 @@ const About = () => {
         <div id='infoBoardAbout' className="board-container-about">
           <div className="position-container">
             <img src={infoBoardSvg} alt="info-board" />
-            <div className="title">
-              COMING SOON
+            <div className="title" onClick={() => window.open(DISCORD_LINK, '_blank')}>
+              JOIN OUR DISCORD
             </div>
             <div className="text">
               We are a group of energetic and passionate nuts living in a metaverse filled with positivity. No matter if you are a walnut or hazelnut or maybe even a human, you will only find yourself immersed in the dimension of hearty and tenacious souls! We are creating a dual reality, featuring the connection between the physical world and the metaverse.

@@ -4,6 +4,7 @@ import '../styles/App.scss';
 import '../styles/Nav.scss';
 
 import {ReactComponent as NutsLight} from '../assets/NutsPageMain.svg';
+import manUFOLight· from '../assets/NutsPageMain.svg';
 import triggerAnimation from '../helpers/triggerAnimation';
 import useNav from '../helpers/navHook';
 
@@ -15,7 +16,7 @@ const $UFOSlideSpeed = 4000;
 const $UFOClickSpeed = 500;
 
 export const TWITTER_LINK = "https://twitter.com/youaregoingnuts"
-export const DISCORD_LINK = "https://discord.gg/RRTZ8F8E8t"
+export const DISCORD_LINK = "https://discord.gg/goingnuts"
 export const TIKTOK_LINK = "https://vm.tiktok.com/TTPdksC2pv/"
 export const IG_LINNK = "https://instagram.com/youaregoingnuts?utm_medium=copy_link"
 

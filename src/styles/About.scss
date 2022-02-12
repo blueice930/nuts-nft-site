@@ -1,5 +1,5 @@
 // Speed
-$boardSlideSpeed: 1s;
+$boardSlideSpeed: .5s;
 $screwClickSpeed: 3s;
 $armSwinSpeed: 10s;
 $drillSwinSpeed: 8s;
@@ -26,11 +26,11 @@ $nutsSpeed: 4s;
       left: -100px;
       max-width: 220px;
       width: 15%;
-      bottom: 8%;
+      bottom: 10%;
     }
 
     img.nuts-movable {
-      top: 46%;
+      top: 32%;
       right: -5%;
       transform-box: view-box;
       width: 6%;
@@ -70,7 +70,7 @@ $nutsSpeed: 4s;
     }
     svg.machineArm {
       width: 36.8%;
-      height: 48%;
+      height: 63%;
       right: -3%;
       top: 10%;
     }
@@ -78,7 +78,7 @@ $nutsSpeed: 4s;
     svg.machineDrill {
       width: 50%;
       height: 42.9%;
-      top: 20%;
+      top: 0%;
       left: -3%;
     }
   }
@@ -98,8 +98,7 @@ $nutsSpeed: 4s;
   position: absolute;
   left:0;
   right: 0;
-  top: 0;
-  bottom: 0;
+  top: 7%;
   margin: auto;
 
   .position-container {
@@ -135,6 +134,8 @@ $nutsSpeed: 4s;
       top: 84%;
       left: 0;
       right: 0;
+      cursor: pointer;
+      transition: opacity .2s ease;
 
       @media screen and (max-width: 1200px)  {
         font-size: 28px;
@@ -145,6 +146,9 @@ $nutsSpeed: 4s;
       @media screen and(min-width: 1800px) {
         font-size: 36px;
       }
+    }
+    .title:hover {
+      opacity: .6;
     }
   }
 
