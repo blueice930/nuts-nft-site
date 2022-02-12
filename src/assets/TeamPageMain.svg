@@ -1,17 +1,18 @@
-<svg viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="TeamPageMain" clip-path="url(#clip0_415_5769)">
-<path id="Vector" d="M1440 0H0V1024H1440V0Z" fill="url(#paint0_linear_415_5769)"/>
-<path id="Vector_2" d="M1396 1047.53H44C25.4413 1047.51 7.64887 1040.13 -5.47409 1027C-18.597 1013.88 -25.9788 996.089 -26 977.53V46.47C-25.9788 27.9113 -18.597 10.1188 -5.47409 -3.00412C7.64887 -16.1271 25.4413 -23.5089 44 -23.53H1396C1414.56 -23.5089 1432.35 -16.1271 1445.47 -3.00412C1458.6 10.1188 1465.98 27.9113 1466 46.47V977.53C1465.98 996.089 1458.6 1013.88 1445.47 1027C1432.35 1040.13 1414.56 1047.51 1396 1047.53V1047.53ZM44 14.83C35.6118 14.8406 27.5702 18.1774 21.6388 24.1088C15.7075 30.0402 12.3706 38.0818 12.36 46.47V977.53C12.3706 985.918 15.7075 993.96 21.6388 999.891C27.5702 1005.82 35.6118 1009.16 44 1009.17H1396C1404.39 1009.16 1412.43 1005.82 1418.36 999.891C1424.29 993.96 1427.63 985.918 1427.64 977.53V46.47C1427.63 38.0818 1424.29 30.0402 1418.36 24.1088C1412.43 18.1774 1404.39 14.8406 1396 14.83H44Z" fill="white"/>
+<svg viewBox="0 0 1440 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="TeamPageMain">
+<g clip-path="url(#clip0_452_719)">
+<path id="Vector" d="M1440 -60H0V1546H1440V-60Z" fill="url(#paint0_linear_452_719)"/>
+</g>
 </g>
 <defs>
-<linearGradient id="paint0_linear_415_5769" x1="278.72" y1="197.37" x2="1191.79" y2="848.39" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_452_719" x1="278.72" y1="249.547" x2="1420.08" y2="768.426" gradientUnits="userSpaceOnUse">
 <stop stop-color="#EABCB6"/>
 <stop offset="0.26" stop-color="#E0C1BE"/>
 <stop offset="0.7" stop-color="#C5D0D4"/>
 <stop offset="1" stop-color="#AFDCE5"/>
 </linearGradient>
-<clipPath id="clip0_415_5769">
-<rect width="1440" height="1024" fill="white"/>
+<clipPath id="clip0_452_719">
+<rect width="1440" height="1500" rx="16" fill="white"/>
 </clipPath>
 </defs>
 </svg>

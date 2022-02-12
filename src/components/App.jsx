@@ -30,6 +30,7 @@ function App() {
     const twitter = document.querySelector('#twitterIcon');
     const discord = document.querySelector('#discordIcon');
     const opensea = document.querySelector('#openseaIcon');
+    const blackWomanWithFlagNuts = document.querySelector('#blackWomanWithFlagNuts');
 
     // // stars slide in
     for (const s of stars) {
@@ -50,6 +51,7 @@ function App() {
 
     twitter.addEventListener("click", () => window.open(TWITTER_LINK, 'blank'))
     discord.addEventListener("click", () => window.open(DISCORD_LINK, 'blank'))
+    blackWomanWithFlagNuts.addEventListener('click', () => window.open(DISCORD_LINK, 'blank'));
 
   }
   , [navAddClickListener]);
