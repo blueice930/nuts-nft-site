@@ -54,7 +54,7 @@
             width: 100%;
             max-width: 205px;
             max-height: 205px;
-            transition: transform .5s ease, opacity .5s ease;
+            transition: transform .3s ease, opacity .3s ease;
           }
 
           img.flipped {
@@ -81,7 +81,7 @@
             font-family: 'Montserrat', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
             right: 0;
             opacity: 1;
-            transition: transform .5s ease, opacity .5s ease;
+            transition: transform .3s ease, opacity .3s ease;
           }
 
           .motto.flipped {
