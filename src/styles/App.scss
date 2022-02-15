@@ -1,4 +1,6 @@
 // Speed
+$bgChangeSpeed: .5s;
+
 $spinSpeed1: 10s;
 $spinSpeed2: 15s;
 
@@ -18,13 +20,56 @@ $nutClickSpeed: .3s;
 
 $bannerClickSpeed: .4s;
 
+$planetBlinkSpeed: 2s;
+
 .app {
+  padding: 5px 10px;
   .bg-container {
-    margin: 5px 10px;
-    svg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 16px;
+    transition: opacity 1s linear;
+  
+    svg#NutsPageMain {
+      display: block;
       width: 100%;
+      border-radius: 16px;;
+    }
+
+    .lightBg {
+      background: linear-gradient(180deg, #DBEAC4 5.66%, #DCE6C1 22.05%, #DED9B9 40.17%, #E1C4AC 57.42%, #E6A799 75.53%, #EC8684 91.92%); 
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity $bgChangeSpeed linear;
+    }
+  
+    .darkBg {
+      background: linear-gradient(180deg, #827FFF 5.66%, #867FFB 20.33%, #9180EE 36.72%, #A381D9 52.24%, #BC83BC 68.63%, #DC8596 85.02%, #EC8684 91.92%);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity $bgChangeSpeed linear;
+    }
+
+    .lightBg.show {
+      opacity: 1;
+    }
+    .darkBg.show {
+      opacity: 1;
     }
   }
+
+
 }
 
 #openseaIcon {
@@ -44,13 +89,26 @@ $bannerClickSpeed: .4s;
   transform: scale(1.1);
 }
 
+#hole3 {
+  width: 10px;
+}
+
 
 // planet
-g#bgPlanet1Nuts {
-  transform-origin: center;
-  transform-box: fill-box;
-  animation: SPIN_1 infinite $spinSpeed2 linear;
+
+#planetLight1 {
+  // visibility: hidden;
+  animation: PLANET_BLINK $planetBlinkSpeed ease infinite;
 }
+#planetLight2 {
+  // visibility: hidden;
+  animation: PLANET_BLINK $planetBlinkSpeed ease infinite;
+}
+#planetLight3 {
+  // visibility: hidden;
+  animation: PLANET_BLINK $planetBlinkSpeed ease infinite;
+}
+
 
 g#bgPlanet2Nuts {
   -webkit-animation-name: SPIN_2;
@@ -86,6 +144,7 @@ g#bgPlanet2Nuts {
   animation: ZOOM_IN_OUT forwards $starZoomSpeed ease;
   transform-origin: center;
   transform-box: fill-box;
+  filter: brightness(1.5);
 }
 
 // woman with makeup
@@ -200,12 +259,15 @@ g#bgPlanet2Nuts {
 @keyframes ZOOM_IN_OUT {
   0% {
     transform: scale(1, 1), rotate(0deg);
+    filter: brightness(1);
   }
   50% {
     transform: scale(1.3, 1.3);
+    filter: brightness(1.2);
   }
   100% {
     transform: scale(1, 1), rotate(360deg);
+    filter: brightness(1);
   }
 }
 
@@ -364,4 +426,12 @@ g#bgPlanet2Nuts {
   }
 }
 
+@keyframes PLANET_BLINK {
+  0% { opacity: 1; }
+  70% { opacity: .4; }
+}
 
+@-webkit-keyframes PLANET_BLINK {
+  0% { opacity: 1; }
+  70% { opacity: .4; }
+}

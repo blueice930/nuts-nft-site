@@ -1,10 +1,10 @@
 $houseClickSpeed: .4s;
 
 .roadmap {
+  padding: 5px 10px;
   .bg-container {
     position: relative;
     overflow: hidden;
-    margin: 5px 10px;
     svg {
       width: 100%;
     }
@@ -55,6 +55,7 @@ $houseClickSpeed: .4s;
       padding: 12px 24px;
       // background-color: #fff5;
       background-color: #0005;
+      text-align: justify;
 
       @media screen and (max-width: 1200px)  {
         font-size: 17px;

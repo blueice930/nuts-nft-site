@@ -76,7 +76,7 @@ const FAQs = () => {
             </div>
             <div className="text">
               What is the supply and how to get involved? <br />
-              AA total of 10,000 unique tokens will be released. The best way to get involved is to check our Discord and follow the rules listed in get-whitelisted to secure one of the 500 whitelist spots. You have an edge when verified as a whitelist member! However, any active Nut in our community will receive the latest announcement from announcements as well as Twitter and Instagram.
+              A total of 10,000 unique tokens will be released. The best way to get involved is to check our Discord and follow the rules listed in get-whitelisted to secure one of the 500 whitelist spots. You have an edge when verified as a whitelist member! However, any active Nut in our community will receive the latest announcement from announcements as well as Twitter and Instagram.
             </div>
           </Parallax>
         </div>

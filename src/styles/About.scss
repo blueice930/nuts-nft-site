@@ -7,9 +7,9 @@ $conveyorSpeed: 10s;
 $nutsSpeed: 4s;
 
 .about {
+  padding: 5px 10px;
   .bg-container {
     position: relative;
-    margin: 5px 10px;
     overflow: hidden;
     svg {
       width: 100%;
@@ -112,7 +112,8 @@ $nutsSpeed: 4s;
       margin: 0 12%;
       font-size: 18px;
       font-family: 'Montserrat', 'Lucida Sans', Arial, sans-serif;
-      top: 31%;
+      text-align: justify;
+      top: 32%;
       left: 0;
       right: 0;
       @media screen and (max-width: 1200px)  {
@@ -141,10 +142,10 @@ $nutsSpeed: 4s;
         font-size: 28px;
       }
       @media screen and(min-width: 1200px) and (max-width: 1800px)  {
-        font-size: 32px;
+        font-size: 36px;
       }
       @media screen and(min-width: 1800px) {
-        font-size: 36px;
+        font-size: 44px;
       }
     }
     .title:hover {

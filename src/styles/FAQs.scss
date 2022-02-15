@@ -1,8 +1,8 @@
 .faqs {
+  padding: 5px 10px;
   .bg-container {
     position: relative;
     overflow: hidden;
-    margin: 5px 10px;
     background: url('../assets/FAQs/faqsBg.png');
     border-radius: 16px;
     background-size: cover;
@@ -88,6 +88,7 @@
           border-radius: 8px;
           width: 55%;
           max-width: 990px;
+          text-align: justify;
 
           @media screen and (max-width: 1200px)  {
             font-size: 16px;

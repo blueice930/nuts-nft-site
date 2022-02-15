@@ -1,8 +1,8 @@
 .team {
+  padding: 5px 10px;
   .bg-container {
     position: relative;
     overflow: hidden;
-    margin: 5px 10px;
     border-radius: 16px;
     background: linear-gradient(116.89deg, #EABCB6 19.33%, #E0C1BE 35.83%, #C5D0D4 63.75%, #AFDCE5 82.79%);
 
@@ -129,6 +129,7 @@
         }
 
         .description {
+          text-transform: uppercase;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -152,9 +153,7 @@
             font-size: 22px;
           }
 
-          .member-name {
-            font-weight: bold;
-          }
+          .member-name {}
         }
       }
     }

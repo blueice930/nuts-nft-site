@@ -10,7 +10,7 @@ import astronauntAbout from "../assets/About/astronauntAbout.png";
 import beerAbout from "../assets/About/beerAbout.png";
 import blackGirlAbout from "../assets/About/blackGirlAbout.png";
 import blondieAbout from "../assets/About/blondieAbout.png";
-import captainAbout from "../assets/About/captainAbout.png";
+// import captainAbout from "../assets/About/captainAbout.png";
 import girlWithCatAbout from "../assets/About/girlWithCatAbout.png";
 import hiphopGuyAbout from "../assets/About/hiphopGuyAbout.png";
 import indianWomanAbout from "../assets/About/indianWomanAbout.png";
@@ -29,6 +29,11 @@ import {ReactComponent as MachineDrillAbout} from "../assets/About/machineDrillA
 import '../styles/About.scss';
 import { DISCORD_LINK } from './App';
 
+// 4 seconds
+const $nutsSpeed = 4;
+const $pplSpeed = 10;
+
+
 const About = () => {
   const [isBoardShown, setIsBoardShown] = useState(false);
   const {width, height} = useWindowDimensions();
@@ -39,7 +44,7 @@ const About = () => {
     const beerAbout = document.querySelector("#beerAbout")
     const blackGirlAbout = document.querySelector("#blackGirlAbout")
     const blondieAbout = document.querySelector("#blondieAbout")
-    const captainAbout = document.querySelector("#captainAbout")
+    // const captainAbout = document.querySelector("#captainAbout")
     const girlWithCatAbout = document.querySelector("#girlWithCatAbout")
     const hiphopGuyAbout = document.querySelector("#hiphopGuyAbout")
     const indianWomanAbout = document.querySelector("#indianWomanAbout")
@@ -56,7 +61,7 @@ const About = () => {
       beerAbout,
       blackGirlAbout,
       blondieAbout,
-      captainAbout,
+      // captainAbout,
       girlWithCatAbout,
       hiphopGuyAbout,
       indianWomanAbout,
@@ -83,7 +88,10 @@ const About = () => {
     const pplListeners = pplList.map((ppl, index) => (
       (ppl?.classList?.contains('moving')) ?
         null :
-        setTimeout(() => {ppl?.classList?.add('moving')}, index*1000)
+        setTimeout(() =>
+          {ppl?.classList?.add('moving')}
+          , index * 1000 * $pplSpeed / pplList?.length
+        )
     ))
 
     const nutsListener = nutsList.map((nut, index) => (
@@ -91,7 +99,7 @@ const About = () => {
         null :
         setTimeout(() => {
           nut?.classList?.add('moving')
-        }, index*1000)
+        }, index * 1000 * $nutsSpeed / nutsList?.length)
     ));
 
     return () => {
@@ -137,7 +145,7 @@ const About = () => {
         <img id='beerAbout' src={beerAbout} alt="nut1About" className="partial ppl-movable" />
         <img id='blackGirlAbout' src={blackGirlAbout} alt="nut1About" className="partial ppl-movable" />
         <img id='blondieAbout' src={blondieAbout} alt="nut1About" className="partial ppl-movable" />
-        <img id='captainAbout' src={captainAbout} alt="nut1About" className="partial ppl-movable" />
+        {/* <img id='captainAbout' src={captainAbout} alt="nut1About" className="partial ppl-movable" /> */}
         <img id='girlWithCatAbout' src={girlWithCatAbout} alt="nut1About" className="partial ppl-movable" />
         <img id='hiphopGuyAbout' src={hiphopGuyAbout} alt="nut1About" className="partial ppl-movable" />
         <img id='indianWomanAbout' src={indianWomanAbout} alt="nut1About" className="partial ppl-movable" />
