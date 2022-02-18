@@ -10,7 +10,7 @@ import bgPlanet from "../assets/Roadmap/bgPlanet.svg"
 import bgPlanet2 from "../assets/Roadmap/bgPlanet2.svg"
 import bgPlanet3 from "../assets/Roadmap/bgPlanet3.svg"
 import manWithBeerCloud from "../assets/Roadmap/manWithBeerCloud.svg"
-import ufoLightOnRdmp from '../assets/Roadmap/ufoLightOnRdmp.svg';
+import ufoLightOnRdmp from '../assets/Roadmap/ufoLightOnRdmp.png';
 
 import cakesLayerRdmp from '../assets/Roadmap/cakesLayerRdmp.svg';
 import starsLayerRdmp from '../assets/Roadmap/starsLayerRdmp.svg';

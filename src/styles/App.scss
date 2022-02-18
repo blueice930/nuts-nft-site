@@ -7,20 +7,24 @@ $spinSpeed2: 15s;
 $starSlideSpeed: 2s;
 $starZoomSpeed: .5s;
 
-$womanSlideSpeed: 2s;
+$womanSlideSpeed: 1s;
 $womanClickSpeed: .5s;
 
-$manAkSpeed: .5s;
-$blackWomanSpeed: 1s;
+$manAkSpeed: .3s;
+$blackWomanSpeed: .5s;
 
-$UFOSlideSpeed: 4s;
-$UFOClickSpeed: .5s;
+$UFOZoomSpeed: .5s;
+$UFOblinkSpeed: .5s;
 
 $nutClickSpeed: .3s;
 
 $bannerClickSpeed: .4s;
 
 $planetBlinkSpeed: 2s;
+
+$manWithBeerSpeed: .6s;
+
+$blondieSpeed: .5s;
 
 .app {
   padding: 5px 10px;
@@ -30,6 +34,7 @@ $planetBlinkSpeed: 2s;
     position: relative;
     border-radius: 16px;
     transition: opacity 1s linear;
+    overflow: hidden;
   
     svg#NutsPageMain {
       display: block;
@@ -93,9 +98,7 @@ $planetBlinkSpeed: 2s;
   width: 10px;
 }
 
-
 // planet
-
 #planetLight1 {
   // visibility: hidden;
   animation: PLANET_BLINK $planetBlinkSpeed ease infinite;
@@ -108,7 +111,6 @@ $planetBlinkSpeed: 2s;
   // visibility: hidden;
   animation: PLANET_BLINK $planetBlinkSpeed ease infinite;
 }
-
 
 g#bgPlanet2Nuts {
   -webkit-animation-name: SPIN_2;
@@ -149,69 +151,160 @@ g#bgPlanet2Nuts {
 
 // woman with makeup
 .woman-with-makeup-first-slide-in {
+  transform-origin: bottom;
   animation: WOMAN_MAKEUP_SLIDE_IN_2 forwards $womanSlideSpeed ease;
 }
 
 .woman-with-makeup-click-movemnt {
+  transform-origin: bottom;
   animation: WOMAN_MAKEUP_CLICK_SLIDE forwards $womanClickSpeed ease;
 }
 
-#womanWithMakeUpNuts {
+img.womanWithMakeUpNuts {
   cursor: pointer;
   filter: drop-shadow( 10px 10px 8px rgba(0, 0, 0, .7));
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 19%;
+  transition: all $womanSlideSpeed ease;
+}
+
+img.womanWithMakeUpNuts.hidden {
+  transform: translateY(100%);
+}
+
+// man with beer
+#manWithBeerNuts {
+  width: 23%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(0);
+  transition: all $manWithBeerSpeed ease;
+}
+
+#manWithBeerNuts.hidden {
+  transform: translateY(100%);
 }
 
 // man with ak-47
 #manWithAKNuts {
+  width: 15%;
   cursor: pointer;
-  transform-origin: bottom;
+  position: absolute;
+  top: 67%;
+  left: 30%;
   transform-box: fill-box;
-  transform:
-    translateX(180%)
-    translateY(385%)
-    rotateY(180deg)
-    rotate(-8deg);
+  transform-origin: bottom;
+  transition: all $manAkSpeed ease;
 }
 
 #manWithAKNuts:hover {
-  animation: MAN_WITH_AK forwards $manAkSpeed ease;
+  animation: BLACK_WOMAN_BOUNCE forwards $manAkSpeed ease;
   transform-origin: bottom;
   transform-box: fill-box;
 }
 
+#manWithAKNuts.hidden {
+  transform: scaleY(0);
+}
+
+#hole3Nuts {
+  position: absolute;
+  top: 89%;
+  left: 28%;
+  width: 18%;
+}
 // black woman with flag
 #blackWomanWithFlagNuts {
   cursor: pointer;
-  transform-origin: 40% 90%;
-  transform-box: fill-box;
-  transform: translateY(4%);
-}
-
-#flag {
-  filter: drop-shadow( 5px 5px 4px rgba(0, 0, 0, .7));
+  position: absolute;
+  top: 56%;
+  left: 12%;
+  width: 26.3%;
+  transition: all $blackWomanSpeed ease;
+  transform-origin: bottom;
 }
 
 #blackWomanWithFlagNuts:hover {
-  animation: BLACK_WOMAN forwards $blackWomanSpeed ease;
-  transform-origin: 40% 90%;
+  animation: BLACK_WOMAN_BOUNCE forwards $blackWomanSpeed ease;
+  transform-origin: bottom;
   transform-box: fill-box;
+}
+
+#blackWomanWithFlagNuts.hidden {
+  transform: scaleY(0);
+}
+
+// Blondie with flag
+#blondieWithFlagNuts {
+  width: 29%;
+  position: absolute;
+  top: 57%;
+  left: 12%;
+  transition: all $blondieSpeed ease;
+  transform: scaleY(1);
+  transform-origin: bottom;
+  cursor: pointer;
+}
+
+#blondieWithFlagNuts.hidden {
+  transform: scaleY(0);
+}
+
+#blondieWithFlagNuts:hover {
+  animation: BLACK_WOMAN_BOUNCE forwards $blondieSpeed ease;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+
+#hole1Nuts {
+  position: absolute;
+  left: 12%;
+  top: 83%;
 }
 
 // UFO
-#manUFOLightNuts {
-  cursor: pointer;
-  filter: drop-shadow( 5px 5px 4px rgba(0, 0, 0, .7));
+#ufoLightNuts {
+  position: absolute;
+  top: 12.7%;
+  left: 13.6%;
+  width: 12.4%;
+  transition: all $UFOZoomSpeed ease;
+  transform: scale(1);
 }
 
-.ufo-slide-in {
-  animation: UFO_SLIDE forwards $UFOSlideSpeed ease;
+#ufoLightNuts.hidden {
+  transform: scale(0);
 }
 
-.ufo-click-shake {
-  animation: UFO_CLICK forwards $UFOClickSpeed ease;
-  transform-origin: 55% 50%;
-  transform-box: fill-box;
+#ufoNightNuts {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 36%;
+  transform-origin: 55% 20%;
+  transform: scale(1);
+  transition: all $UFOZoomSpeed ease;
 }
+
+#ufoNightNuts.hidden {
+  transform: scale(0);
+}
+
+#ufoLight1 {
+  animation: UFO_BLINK $UFOblinkSpeed  ease infinite;
+}
+
+#ufoLight2 {
+  animation: UFO_BLINK $UFOblinkSpeed $UFOblinkSpeed * 0.3 ease infinite;
+} 
+
+#ufoLight3 {
+  animation: UFO_BLINK $UFOblinkSpeed $UFOblinkSpeed *0.67 ease infinite;
+} 
 
 // Nuts
 #nutNuts {
@@ -285,40 +378,45 @@ g#bgPlanet2Nuts {
 }
 
 @keyframes WOMAN_MAKEUP_SLIDE_IN_2 {
-  0% { transform: translateX(110%) translateY(120%) scaleX(-1); }
-  40% { transform: translateX(110%) translateY(75%) scaleX(-1); }
-  50% { transform: translateX(110%) translateY(80%) scaleX(-1); }
-  100% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
+  0% { transform: translateY(100%) }
+  100% { transform: translateY(0) }
 }
 
 @-webkit-keyframes WOMAN_MAKEUP_SLIDE_IN_2 {
-  0% { transform: translateX(110%) translateY(120%) scaleX(-1); }
-  40% { transform: translateX(110%) translateY(75%) scaleX(-1); }
-  50% { transform: translateX(110%) translateY(80%) scaleX(-1); }
-  100% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
+  0% { transform: rotateX(90deg) }
+  100% { transform: rotateX(0) }
+}
+
+@keyframes WOMAN_MAKEUP_SLIDE_OUT {
+  0% { transform: translateY(0deg) }
+  100% { transform: translateY(100%) }
+}
+
+@-webkit-keyframes WOMAN_MAKEUP_SLIDE_OUT {
+  0% { transform: translateY(0deg) }
+  100% { transform: translateY(100%) }
 }
 
 @keyframes WOMAN_MAKEUP_CLICK_SLIDE {
-  0% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
-  40% { transform: translateX(110%) translateY(65%) scaleX(-1); }
-  100% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
+  20% { transform: rotate(5deg) }
+  40% { transform: rotate(-5deg) }
+  60% { transform: rotate(0) }
+
 }
 
 @-webkit-keyframes WOMAN_MAKEUP_CLICK_SLIDE {
-  0% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
-  40% { transform: translateX(110%) translateY(65%) scaleX(-1); }
-  100% { transform: matrix(-0.998274 -0.058722 -0.058722 0.998274 1625.74 703.11); }
+  20% { transform: rotate(5deg) }
+  40% { transform: rotate(-5deg) }
+  60% { transform: rotate(0) }
 }
 
-@keyframes UFO_SLIDE {
-  0% { transform: translateX(-10%) translateY(0%); }
-  30% { transform: translateX(0%) translateY(10%); }
-  100% { transform: translateX(0%) translateY(0%); }
+@keyframes UFO_ZOOM_IN {
+  0% { transform: scale(0) }
+  100% { transform: scale(100%)}
 }
 
-@-webkit-keyframes UFO_SLIDE {
+@-webkit-keyframes UFO_ZOOM_IN {
   0% { transform: translateX(-10%) translateY(0%); }
-  30% { transform: translateX(0%) translateY(10%); }
   100% { transform: translateX(0%) translateY(0%); }
 }
 
@@ -337,12 +435,12 @@ g#bgPlanet2Nuts {
 }
 
 @keyframes NUT_HOVER {
-  50% { transform: scaleY(80%); }
+  50% { transform: scaleY(110%) scaleX(95%); }
   100% { transform: scaleY(1); }
 }
 
 @-webkit-keyframes NUT_HOVER {
-  50% { transform: scaleY(80%); }
+  50% { transform: scaleY(110%) scaleX(95%); }
   100% { transform: scaleY(1); }
 }
 
@@ -356,38 +454,14 @@ g#bgPlanet2Nuts {
   100% { transform: rotateX(0deg) scaleX(1); }
 }
 
-@keyframes BLACK_WOMAN {
-  40% { transform: translateY(4%) rotate(10deg); }
-  60% { transform: translateY(4%) rotate(0deg); }
-}
-
-@-webkit-keyframes BLACK_WOMAN {
+@keyframes BLACK_WOMAN_BOUNCE {
   50% { transform: rotateX(30deg) scaleX(105%); }
   100% { transform: rotateX(0deg) scaleX(1); }
 }
 
-@keyframes MAN_WITH_AK {
-  80% {
-    transform:
-      translateX(180%)
-      translateY(385%)
-      rotateY(180deg)
-      rotate(-8deg)
-      rotateX(45deg)
-      scaleX(115%);
-  }
-}
-
-@-webkit-keyframes MAN_WITH_AK {
-  80% {
-    transform:
-      translateX(180%)
-      translateY(385%)
-      rotateY(180deg)
-      rotate(-8deg)
-      rotateX(45deg)
-      scaleX(115%);
-  }
+@-webkit-keyframes BLACK_WOMAN_BOUNCE {
+  50% { transform: rotateX(30deg) scaleX(105%); }
+  100% { transform: rotateX(0deg) scaleX(1); }
 }
 
 @keyframes POINTER_PALSE {
@@ -432,6 +506,16 @@ g#bgPlanet2Nuts {
 }
 
 @-webkit-keyframes PLANET_BLINK {
+  0% { opacity: 1; }
+  70% { opacity: .4; }
+}
+
+@keyframes UFO_BLINK {
+  0% { opacity: 1; }
+  70% { opacity: .4; }
+}
+
+@-webkit-keyframes UFO_BLINK {
   0% { opacity: 1; }
   70% { opacity: .4; }
 }
