@@ -195,13 +195,14 @@ img.womanWithMakeUpNuts.hidden {
   position: absolute;
   top: 67%;
   left: 30%;
+  transform: scaleY(0.9);
   transform-box: fill-box;
   transform-origin: bottom;
   transition: all $manAkSpeed ease;
 }
 
 #manWithAKNuts:hover {
-  animation: BLACK_WOMAN_BOUNCE forwards $manAkSpeed ease;
+  animation: MAN_WITH_AK_BOUNCE forwards $manAkSpeed ease;
   transform-origin: bottom;
   transform-box: fill-box;
 }
@@ -221,7 +222,7 @@ img.womanWithMakeUpNuts.hidden {
   cursor: pointer;
   position: absolute;
   top: 56%;
-  left: 12%;
+  left: 14%;
   width: 26.3%;
   transition: all $blackWomanSpeed ease;
   transform-origin: bottom;
@@ -264,6 +265,7 @@ img.womanWithMakeUpNuts.hidden {
   position: absolute;
   left: 12%;
   top: 83%;
+  width: 18%;
 }
 
 // UFO
@@ -282,9 +284,10 @@ img.womanWithMakeUpNuts.hidden {
 
 #ufoNightNuts {
   position: absolute;
+  width: 36%;
+  height: 72%;
   top: 10%;
   left: 0;
-  width: 36%;
   transform-origin: 55% 20%;
   transform: scale(1);
   transition: all $UFOZoomSpeed ease;
@@ -456,12 +459,22 @@ img.womanWithMakeUpNuts.hidden {
 
 @keyframes BLACK_WOMAN_BOUNCE {
   50% { transform: rotateX(30deg) scaleX(105%); }
-  100% { transform: rotateX(0deg) scaleX(1); }
+  100% { transform: rotateX(0deg) scaleX(1) }
 }
 
 @-webkit-keyframes BLACK_WOMAN_BOUNCE {
   50% { transform: rotateX(30deg) scaleX(105%); }
   100% { transform: rotateX(0deg) scaleX(1); }
+}
+
+@keyframes MAN_WITH_AK_BOUNCE {
+  50% { transform: rotateX(30deg) scaleX(105%) scaleY(.9) ; }
+  100% { transform: rotateX(0deg) scaleX(1) scaleY(.9) }
+}
+
+@-webkit-keyframes MAN_WITH_AK_BOUNCE {
+  50% { transform: rotateX(30deg) scaleX(105%) scaleY(.9) ; }
+  100% { transform: rotateX(0deg) scaleX(1) scaleY(.9) }
 }
 
 @keyframes POINTER_PALSE {

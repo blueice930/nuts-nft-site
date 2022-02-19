@@ -112,10 +112,11 @@ $nutsSpeed: 4s;
       margin: 0 12%;
       font-size: 18px;
       font-family: 'Montserrat', 'Lucida Sans', Arial, sans-serif;
-      text-align: justify;
       top: 32%;
       left: 0;
       right: 0;
+      hyphens: auto;
+
       @media screen and (max-width: 1200px)  {
         font-size: 17px;
       }

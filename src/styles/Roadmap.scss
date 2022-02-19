@@ -55,7 +55,7 @@ $houseClickSpeed: .4s;
       padding: 12px 24px;
       // background-color: #fff5;
       background-color: #0005;
-      text-align: justify;
+      hyphens: auto;
 
       @media screen and (max-width: 1200px)  {
         font-size: 17px;

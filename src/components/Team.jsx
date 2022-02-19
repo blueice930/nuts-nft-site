@@ -98,7 +98,7 @@ const Team = () => {
                   <div className={`motto member${index} flipped`}>
                     {m?.motto}
                   </div>
-                  <img className={`member${index}`} src={m?.src} alt={`team member index`} />
+                  <img className={`member${index}`} src={m?.src} alt={`team member ${index}`} />
                 </div>
                 <div className="description">
                   <div className="member-name">{m.name}</div>
